@@ -6,7 +6,7 @@
 */
 
 // Include JSON data
-jQuery.getJSON('careers.json').done(function (data) {
+jQuery.getJSON('github.com/mUtterberg/CareeerAction/blob/master/careers.json').done(function (data) {
   careers = data;
   careerToday = careers[Math.floor(Math.random() * careers.length)];
 })
