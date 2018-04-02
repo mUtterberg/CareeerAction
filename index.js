@@ -6,10 +6,12 @@
 */
 
 // Include JSON data
+/* Another failed attempt! "jQuery" and "$" both traced back undefined on deploy in Cloud Functions.
 $.getJSON('github.com/mUtterberg/CareeerAction/blob/master/careers.json').done(function (data) {
   careers = data;
   careerToday = careers[Math.floor(Math.random() * careers.length)];
 })
+*/
 
 /*// Pick random career title
 function pickRandomCareer(){
@@ -21,8 +23,10 @@ function pickRandomCareer(){
 // Define a career of the day
 var careerToday = pickRandomCareer()*/
 
+var careerToday = "GOING TO BE AWESOME.";
+
 exports.helloHttp = function helloHttp (req, res) {
-  response = "Today's career spotlight is " + careerToday.Title //Default response from the webhook to show it's working
+  response = "Today's career spotlight is " + careerToday //Default response from the webhook to show it's working
 
 
   res.setHeader('Content-Type', 'application/json'); //Requires application/json MIME type
